@@ -1,8 +1,6 @@
 package com.example.employee_services.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -13,12 +11,20 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @NoArgsConstructor
 public class Employee {
 
+    @Getter
+    @Setter
     @Id
     private String id;
+    @Getter
+    @Setter
     @Field
     private String name;
+    @Getter
+    @Setter
     @Field
     private String designation;
+    @Getter
+    @Setter
     @Field
     private double salary;
 }

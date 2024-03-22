@@ -1,35 +1,35 @@
 package com.example.order_services.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import java.util.Date;
 
+@Getter
 @Document(collection = "orders")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
 
+    @Setter
     @Id
     private String id;
 
+    @Setter
     @Field
     private Date date;
 
-    @Getter
+    @Setter
     @Field
     private String customerId;
 
-    @Getter
+    @Setter
     @Field
     private String productId;
 
-    @Getter
+    @Setter
     @Field
     private String employeeId;
 

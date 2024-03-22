@@ -5,11 +5,12 @@ import com.example.order_services.repository.OrderRepository;
 import com.example.order_services.valueObject.Customer;
 import com.example.order_services.valueObject.Employee;
 import com.example.order_services.valueObject.Product;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.order_services.valueObject.ResponseValueObject;
 import org.springframework.web.client.RestTemplate;
-
+@Getter
 @Service
 public class OrderService {
     @Autowired
@@ -19,15 +20,11 @@ public class OrderService {
         return orderRepository.save(order);
     }
 
-    public Order findOrderById(String userId) {
-        return orderRepository.findOrderById(userId);
-    }
-
     @Autowired
     private RestTemplate restTemplate;
-    public ResponseValueObject getUserWithDepartment(Long userId) {
+    public ResponseValueObject findOrderById(String orderId) {
         ResponseValueObject ResponseValueObject = new ResponseValueObject();
-        Order order = orderRepository.findOrderById(String.valueOf(userId));
+        Order order = orderRepository.findOrderById(String.valueOf(orderId));
         Product product = restTemplate.getForObject("http://PRODUCT-SERVICE/products/" + order.getProductId(), Product.class);
         Customer customer = restTemplate.getForObject("http://CUSTOMER-SERVICE/customers/" + order.getCustomerId(), Customer.class);
         Employee employee = restTemplate.getForObject("http://Employee-SERVICE/employees/" + order.getEmployeeId(), Employee.class);

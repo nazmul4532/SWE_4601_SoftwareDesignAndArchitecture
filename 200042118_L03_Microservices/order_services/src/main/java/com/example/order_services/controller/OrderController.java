@@ -2,6 +2,7 @@ package com.example.order_services.controller;
 
 import com.example.order_services.entity.Order;
 import com.example.order_services.service.OrderService;
+import com.example.order_services.valueObject.ResponseValueObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +23,8 @@ public class OrderController {
     }
 
     @GetMapping("/{id}")
-    public Order findOrderById(@PathVariable("id") String orderId){
+    @ResponseBody
+    public ResponseValueObject findOrderById(@PathVariable("id") String orderId){
         return orderService.findOrderById(orderId);
     }
 }
