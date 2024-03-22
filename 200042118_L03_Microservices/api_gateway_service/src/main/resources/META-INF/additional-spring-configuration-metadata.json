@@ -1,0 +1,68 @@
+{
+  "properties": [
+    {
+      "name": "spring.cloud.gateway.routes",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[0].id",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[0].id."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[0].uri",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[0].uri."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[0].predicates",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[0].predicates."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[1].id",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[1].id."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[1].uri",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[1].uri."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[1].predicates",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[1].predicates."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[2].id",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[2].id."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[2].uri",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[2].uri."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[2].predicates",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[2].predicates."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[3].id",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[3].id."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[3].uri",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[3].uri."
+    },
+    {
+      "name": "spring.cloud.gateway.routes[3].predicates",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.gateway.routes[3].predicates."
+    }
+  ] }
