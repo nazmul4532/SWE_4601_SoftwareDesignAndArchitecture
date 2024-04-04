@@ -12,7 +12,6 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
-
     @Id
     private String id;
     @Field

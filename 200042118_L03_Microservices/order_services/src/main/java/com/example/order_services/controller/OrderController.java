@@ -12,19 +12,13 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @GetMapping("/")
-    public String getOrder(){
-        return "Hello";
-    }
-
     @PostMapping("/")
     public Order saveOrder(@RequestBody Order order){
         return orderService.saveOrder(order);
     }
 
     @GetMapping("/{id}")
-    @ResponseBody
-    public ResponseValueObject findOrderById(@PathVariable("id") String orderId){
-        return orderService.findOrderById(orderId);
+    public ResponseValueObject findOrderById(@PathVariable String id){
+        return orderService.getUserWithDepartment(id);
     }
 }

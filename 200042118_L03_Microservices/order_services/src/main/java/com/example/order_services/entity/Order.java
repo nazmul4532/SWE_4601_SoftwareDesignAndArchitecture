@@ -1,36 +1,27 @@
 package com.example.order_services.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
-import java.util.Date;
 
-@Getter
-@Document(collection = "orders")
+import java.time.LocalDateTime;
+
+@Document(collection = "Order")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
-
-    @Setter
     @Id
     private String id;
-
-    @Setter
-    @Field
-    private Date date;
-
-    @Setter
     @Field
     private String customerId;
-
-    @Setter
     @Field
     private String productId;
-
-    @Setter
     @Field
     private String employeeId;
-
+    @Field
+    private LocalDateTime date= LocalDateTime.now();
 }
