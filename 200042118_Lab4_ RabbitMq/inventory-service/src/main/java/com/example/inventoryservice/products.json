@@ -1,0 +1,17 @@
+[
+  {
+    "productId": "12345",
+    "name": "burger",
+    "qty": 10
+  },
+  {
+    "productId": "54321",
+    "name": "sandwich",
+    "qty": 20
+  },
+  {
+    "productId": "31382",
+    "name": "biriyani",
+    "qty": 15
+  }
+]
